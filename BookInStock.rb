@@ -12,15 +12,9 @@ class BookInStock
         "ISBN: #{@isbn}, price : #{@price}"
     end
 
-    # #getISBN
-    # def isbn
-    #     @isbn
-    # end
-
-    # #getPrice
-    # def price
-    #     @price
-    # end
+    def price=(new_price)
+        @price = new_price
+    end
 end
 
 b1 = BookInStock.new("isbn1", 3)
@@ -30,3 +24,7 @@ puts b1
 puts "ISBN : #{b1.isbn}"
 
 puts "Price : #{b1.price}"
+
+b1.price = 50
+
+puts "After Price : #{b1.price}"
