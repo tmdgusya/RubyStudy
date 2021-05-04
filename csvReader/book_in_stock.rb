@@ -4,7 +4,7 @@ class BookInStock
 
     def initialize(isbn, price)
         @isbn = isbn
-        @price = price
+        @price = Float(price)
     end
 
 end

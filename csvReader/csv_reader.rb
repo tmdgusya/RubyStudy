@@ -8,9 +8,8 @@ class CSVReader
     end
 
     def readInCSVData(csvFileName)
-        CSV.foreach(csvFileName, quote_char: "\x00", col_sep: "\t", headers: true) do |row|
-            puts row
-            @books_in_stock << BookInStock.new(row['ISBN'], row['Price'])
+        CSV.foreach(csvFileName, headers: true) do |row|
+            @books_in_stock << BookInStock.new(row["ISBN"], row["Price"])
         end
     end
 
@@ -21,7 +20,7 @@ class CSVReader
     end
 
     def numberOfEachISBN
-        # ISBN Print..
+        @books_in_stock.each {|book| p book}
     end
     
 end
