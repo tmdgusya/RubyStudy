@@ -1,9 +1,9 @@
 array = ['roach', 4020, nil, true]
 
 # for-each
-array.each do |value|
-  puts value
-end
+# array.each do |value|
+#   puts value
+# end
 
 # Hash Map
 
@@ -12,13 +12,15 @@ hashs = {
   1234 => 'rororo' 
 }
 
-history = Hash.new(0)
+hashs.each {|name, value| puts "key : #{name}, value : #{value}"}
+
+# history = Hash.new(0)
 
 # put value
-history['roach'] = '존재한다.'
+# history['roach'] = '존재한다.'
 
-puts hashs[1234]
+# puts hashs[1234]
 
-puts history['roach']
+# puts history['roach']
 
-puts history['roach2']
+# puts history['roach2']
