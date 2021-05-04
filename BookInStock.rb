@@ -1,6 +1,7 @@
 class BookInStock
 
     attr_reader :isbn, :price
+    attr_accessor :isbn, :price
 
     def initialize(isbn, price)
         @isbn = isbn
@@ -12,9 +13,6 @@ class BookInStock
         "ISBN: #{@isbn}, price : #{@price}"
     end
 
-    def price=(new_price)
-        @price = new_price
-    end
 end
 
 b1 = BookInStock.new("isbn1", 3)
