@@ -67,3 +67,38 @@ bo.call("YES!")
 block = lambda { |param| puts "Block Method to Lambda #{param}"}
 block.call "LAMBDA!!!"
 ```
+
+## Block 은 Closure 이기도 하다.
+
+- 블록 내부에서 블록의 외부 스코프에 있는 지역 변수도 참조 가능하다.
+
+```ruby
+def n_times(thing)
+    lambda {|n| thing * n}
+end
+
+p1 = n_times(23)
+puts p1.call 3 # result 69
+```
+
+- n_times 메소드는 **이 메소드의 매개변수 thing 을 참조하는 Proc 객체를 반환**한다.
+
+```ruby
+m1 = -> arg1 {puts "print #{arg1}"}
+m2 = -> (arg1, arg2) {puts "print multi value : #{arg1}, #{arg2}"}
+
+m1.call "arg"
+m2.call 1,2
+
+=begin
+result
+- print arg
+- print multi value : 1, 2
+=end
+```
+
+- `->` 는 루비 개발자가 lambda 를 연상시킨다 하여 `->` 를 사용할 수 있다.
+
+## lambda 조금 더 파헤치기
+
+-
