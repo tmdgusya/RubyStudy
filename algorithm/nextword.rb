@@ -1,0 +1,1 @@
+p ["H", "A", "B"].collect {|word| word.succ}
