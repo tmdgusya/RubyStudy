@@ -14,6 +14,7 @@ inst_section = {
   trumpet: 'brass',
   violin: 'string'
 }
+
 puts inst_section[:oboe]
 
 puts :abcd.object_id
@@ -26,6 +27,6 @@ puts "abcd".object_id == "abcd".object_id
 # Symbol 을 사용하는 이유
 puts :abcd.object_id == :abcd.object_id
 
-zzz = "abcd
+zzz = "abcd"
 
 puts zzz.intern
